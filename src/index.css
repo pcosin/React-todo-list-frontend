@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+main {
+  background-image: linear-gradient(109.6deg, rgba(143, 109, 219, 255), rgba(209, 126, 242, 255));
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.mainCard {
+  width: min(100% - 4rem, 500px);
+  border-radius: 25px;
+  background-color: #fff;
+  padding: 1rem;
+  margin-inline: auto;
+}
+
+.icon-app {
+  max-width: 80px;
+}
+
+.title {
+  font-family: "Dosis", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.mainCard button i {
+  vertical-align: middle;
+  margin-left: 0.2rem;
+}
+
+.inputForm {
+  border: none;
+  padding: 10px;
+  border: 1px solid #eee;
+  outline: none;
+  width: 65%;
+}
+
+.inputForm::placeholder {
+  padding: 0px;
+}
+
+.button-52 {
+  font-weight: 200;
+  letter-spacing: 0.2px;
+  padding: 10px 15px 10px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
+.button-52::after {
+  content: "";
+  background-color: rgba(143, 109, 219, 0.6);
+  width: 100%;
+  /* z-index: -1; */
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: all ease-in-out 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.cardsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  max-height: 60vh;
+  height: 60vh;
+}
+
+.card {
+  width: 90%;
+  padding: 15px;
+  box-shadow: 2px 4px 4px 4px rgba(71, 71, 71, 0.16);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  margin: 5px 0px;
+  position: relative;
+}
+
+.task {
+  padding: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 0.3rem;
+  color: rgba(143, 109, 219, 255);
+}
+.icon:hover {
+  transform: scale(1.3);
+}
+
+.completeIcon {
+  color: rgba(143, 109, 219, 255);
+}
+
+.crossOut {
+  text-decoration: line-through;
+  color: rgba(143, 109, 219, 255);
+}
+
+.trashIcon:hover {
+  color: #f00;
+}
+
+.deleteConfirmationPop {
+  position: relative;
+  background-color: rgba(255, 255, 255);
+  z-index: 99;
+  width: 100%;
+  top: -100px;
+  left: 0;
+}
+.deleteSpace {
+  position: relative;
+  width: 30%;
+}
+
+.noTasks {
+  font-size: 48px;
+}
+
+@media (max-width: 460px) {
+  .inputForm {
+    width: 58%;
+  }
+}
+
+@media (max-width: 440px) {
+  .button-52 {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: min(88%);
+  }
+}
+
+@media (max-width: 360px) {
+  .button-52 {
+    padding: 9px 2px;
+  }
+
+  .inputForm {
+    width: 55%;
+  }
+}
+
+@media (max-width: 325px) {
+  .card {
+    width: min(87%);
+  }
+}
